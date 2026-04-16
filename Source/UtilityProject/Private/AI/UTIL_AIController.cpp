@@ -115,7 +115,7 @@ void AUTIL_AIController::Tick(float DeltaTime)
 		}
 
 		const float ActionValue = CurrentAction->CalculateActionUtility(BlackboardContext);
-		if (ActionValue > HighestValue)
+		if (ActionValue >= HighestValue)
 		{
 			HighestValue = ActionValue;
 			SelectedAction = CurrentAction;
